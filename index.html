@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTI + 大五人格融合测试</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-container">
+    <section id="welcome-page" class="page active">
+      <div class="card hero-card">
+        <h1>MBTI + 大五人格融合测试</h1>
+        <p class="subtitle">用两套经典人格框架，生成更立体的你。</p>
+        <p class="disclaimer">免责声明：本测试仅用于自我探索，不构成心理诊断。</p>
+        <button id="start-btn" class="btn btn-primary">开始测试</button>
+      </div>
+    </section>
+
+    <section id="test-page" class="page">
+      <div class="progress-wrap card">
+        <div class="progress-top">
+          <span id="progress-label">进度：0/36</span>
+          <span id="section-label">MBTI 部分</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="card question-card" id="question-card">
+        <p id="question-index" class="question-index"></p>
+        <h2 id="question-text" class="question-text"></h2>
+        <div id="answer-area" class="answer-area"></div>
+      </div>
+
+      <div class="nav-actions">
+        <button id="prev-btn" class="btn btn-secondary">上一题</button>
+        <button id="next-btn" class="btn btn-primary">下一题</button>
+      </div>
+    </section>
+
+    <section id="result-page" class="page">
+      <div class="card result-top">
+        <h2>你的融合人格结果</h2>
+        <p class="mbti-type">MBTI 类型：<strong id="mbti-type"></strong></p>
+        <div id="mbti-dimension-bars" class="dimension-bars"></div>
+      </div>
+
+      <div class="card chart-card">
+        <h3>大五人格维度（0-100）</h3>
+        <canvas id="big5-canvas" width="700" height="380" aria-label="大五人格条形图"></canvas>
+      </div>
+
+      <div class="card fusion-card">
+        <h3>融合结论报告</h3>
+        <div class="report-block">
+          <h4>一句话总结</h4>
+          <p id="report-summary"></p>
+        </div>
+        <div class="report-block">
+          <h4>你的认知与决策风格</h4>
+          <p id="report-cognition"></p>
+        </div>
+        <div class="report-block">
+          <h4>你的社交与沟通风格</h4>
+          <p id="report-social"></p>
+        </div>
+        <div class="report-block">
+          <h4>你的学习与工作方式</h4>
+          <p id="report-work"></p>
+        </div>
+        <div class="report-block">
+          <h4>你的潜在盲点</h4>
+          <p id="report-blindspot"></p>
+        </div>
+        <div class="report-block">
+          <h4>你的成长建议</h4>
+          <p id="report-growth"></p>
+        </div>
+      </div>
+
+      <button id="restart-btn" class="btn btn-primary restart-btn">重新测试</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
